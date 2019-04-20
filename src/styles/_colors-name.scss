@@ -1,0 +1,72 @@
+$color-plump-purple: rgb(95, 59, 186);
+
+$color-dark-blue-gray: rgb(100, 92, 147);
+
+$color-white-smoke: rgb(248, 248, 248);
+
+$color-middle-blue-purple: rgb(138, 112, 204);
+
+$color-charleston-green: rgb(43, 43, 43);
+
+$color-middle-red-purple: rgb(28, 6, 84);
+
+$color-light-medium-orchid: rgb(221, 138, 209);
+
+$color-french-mauve: rgb(209, 115, 194);
+
+%bg-gradient--dark-blue-gray-plump-purple {
+  background: $color-dark-blue-gray;
+  background: -moz-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-plump-purple 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, $color-dark-blue-gray), color-stop(100%, $color-plump-purple));
+  background: -webkit-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-plump-purple 100%);
+  background: -o-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-plump-purple 100%);
+  background: -ms-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-plump-purple 100%);
+  background: linear-gradient(135deg, $color-dark-blue-gray 0%, $color-plump-purple 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#645c93', endColorstr='#5f3bba', GradientType=1 );
+  background-attachment: fixed;
+}
+
+%bg-gradient--dark-blue-gray-middle-red-purple {
+  background: $color-dark-blue-gray;
+  background: -moz-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-middle-red-purple 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, $color-dark-blue-gray), color-stop(100%, $color-middle-red-purple));
+  background: -webkit-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-middle-red-purple 100%);
+  background: -o-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-middle-red-purple 100%);
+  background: -ms-linear-gradient(-45deg, $color-dark-blue-gray 0%, $color-middle-red-purple 100%);
+  background: linear-gradient(135deg, $color-dark-blue-gray 0%, $color-middle-red-purple 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#645c93', endColorstr='#5f3bba', GradientType=1 );
+  background-attachment: fixed;
+}
+
+%bg-default-blur {
+  background-color: rgba($color-white-smoke, 0.13);
+  backdrop-filter: blur(5px);
+}
+
+/* BG CLASSES */
+
+.bg-plump-purple {
+  background-color: $color-plump-purple;
+}
+
+.bg-white-smoke {
+  background-color: $color-white-smoke;
+}
+
+.bg-gradient--dark-blue-gray-plump-purple {
+  @extend %bg-gradient--dark-blue-gray-plump-purple;
+}
+
+.bg-gradient--dark-blue-gray-middle-red-purple {
+  @extend %bg-gradient--dark-blue-gray-middle-red-purple;
+}
+
+.bg-default-blur {
+  @extend %bg-default-blur;
+}
+
+/* TEXT CLASSES */
+
+.text-white-smoke {
+  color: $color-white-smoke;
+}

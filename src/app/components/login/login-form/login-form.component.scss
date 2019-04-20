@@ -1,0 +1,20 @@
+@import 'colors-name';
+
+.login {
+  &__container {
+    border-radius: 12px;
+    border: solid 2px $color-middle-blue-purple;
+    height: 400px;
+    width: 300px;
+    margin: 16px 0;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    color: $color-white-smoke;
+  }
+
+  &__footer {
+    color: $color-white-smoke;
+  }
+}
