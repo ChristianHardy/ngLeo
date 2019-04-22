@@ -4,4 +4,12 @@
       border-radius: 60px;
     }
   }
+
+  &-primary.focus, &-primary:focus {
+    box-shadow: none;
+  }
+
+  &-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+  }
 }

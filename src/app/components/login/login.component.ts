@@ -13,11 +13,11 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.classList.add('bg-gradient--dark-blue-gray-middle-red-purple');
+    this.elementRef.nativeElement.ownerDocument.body.classList.add('bg-gradient--main-1-main-3');
   }
 
   ngOnDestroy() {
-    this.elementRef.nativeElement.ownerDocument.body.classList.remove('bg-gradient--dark-blue-gray-middle-red-purple');
+    this.elementRef.nativeElement.ownerDocument.body.classList.remove('bg-gradient--main-1-main-3');
   }
 
 }

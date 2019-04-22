@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modules
@@ -19,6 +20,7 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule
