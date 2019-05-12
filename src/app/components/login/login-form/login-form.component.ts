@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { environment } from '../../../../environments/environment';
 import { UtilsService } from './../../../services/utils.service';
 
 @Component({
@@ -10,7 +13,12 @@ import { UtilsService } from './../../../services/utils.service';
 export class LoginFormComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private utilsService: UtilsService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private utilsService: UtilsService,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -23,13 +31,19 @@ export class LoginFormComponent implements OnInit {
     if (this.loginForm.status.toLowerCase() === 'invalid') {
       for (const [key, value] of Object.entries(this.loginForm.controls)) {
         if (value.status.toLowerCase() === 'invalid') {
-          console.log(key, value);
           this.utilsService.showSnackBar(this.formErrorMessage(key, value.errors));
           break;
         }
       }
     } else {
-      // WS to login
+      this.authService.login().subscribe(
+        onNext => {
+          this.router.navigate([environment.constants.urlApp]);
+        },
+        onError => {
+          console.error(onError);
+        }
+      );
     }
   }
 
