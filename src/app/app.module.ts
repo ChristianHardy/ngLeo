@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { DashComponent } from './components/dash/dash.component';
+import { HeaderComponent } from './components/dash/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoginFormComponent,
-    DashComponent
+    DashComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

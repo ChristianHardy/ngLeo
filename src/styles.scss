@@ -6,14 +6,16 @@
 @import 'material-design';
 @import 'global';
 
-html, body {
-  height:100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: $color-white-4;
+  overflow-x: hidden;
 }
 
 a {
@@ -21,5 +23,47 @@ a {
 
   &:hover {
     color: $color-french-mauve;
+  }
+}
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -3.75rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  // padding: 0.875rem 1.25rem;
+  // font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 3.75rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -3.75rem;
   }
 }
