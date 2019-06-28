@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  constants: {
+    secret: 'Mi1Y7a9sPp',
+    secretSHA256: 'ZfWQuu4NfXsLgUfrrqEwNkQ62bVcAdUASqRygHz7',
+    urlHomepage: '/',
+    urlApp: '/dashboard'
+  }
 };
 
 /*
